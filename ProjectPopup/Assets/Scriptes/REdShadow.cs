@@ -16,6 +16,14 @@ public class CircleFollower : MonoBehaviour
         if (currentTween != null && currentTween.IsActive())
             currentTween.Kill();
         // transform.position = target.position;(i causes irregular movement)
-        transform.DOMove(target.position, 0.3f).SetEase(Ease.InOutSine);
+        
+        // transform.DOMove(target.position, 0.3f).SetEase(Ease.InOutSine);
+        Sequence mySequence = DOTween.Sequence();
+        
+        mySequence.Append(transform.DOScale(0.5f, 0.2f).SetEase(Ease.InOutSine));
+        
+        mySequence.Append(transform.DOMove(target.position, 0.3f).SetEase(Ease.InOutSine));
+        
+        mySequence.Append(transform.DOScale(1f, 0.2f).SetEase(Ease.InOutSine));
     }
 }

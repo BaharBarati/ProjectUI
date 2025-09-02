@@ -92,6 +92,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Quest
       objectReference: {fileID: 0}
+    - target: {fileID: 5477257160153691300, guid: 559f28529fe510149b696d36f0d92004, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 170.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477257160153691300, guid: 559f28529fe510149b696d36f0d92004, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -106.571
+      objectReference: {fileID: 0}
     - target: {fileID: 8060298257305460535, guid: 559f28529fe510149b696d36f0d92004, type: 3}
       propertyPath: m_Name
       value: QuestMenuItem

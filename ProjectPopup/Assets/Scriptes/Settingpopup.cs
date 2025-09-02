@@ -7,5 +7,6 @@ public class Settingpopup : MonoBehaviour
     {
 
         BlackPanel.SetActive(true);
+
     }
 }

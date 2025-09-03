@@ -38,4 +38,9 @@ public class Manager : MonoBehaviour
             toggles[currentIndex].isOn= true;
         }
     }
+
+    public void OnChangePageStatus(bool state)
+    {
+        
+    }
 }

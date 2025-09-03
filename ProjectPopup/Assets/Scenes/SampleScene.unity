@@ -1316,6 +1316,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 242666734}
+  - component: {fileID: 242666735}
+  - component: {fileID: 242666736}
   m_Layer: 5
   m_Name: Screen
   m_TagString: Untagged
@@ -1344,6 +1346,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0.619812, y: 0.8709717}
   m_SizeDelta: {x: 1.24, y: -1.7416}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &242666735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242666733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8d16e2f869d2245aa07c6ad04dd691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myImage: {fileID: 375789856}
+--- !u!225 &242666736
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242666733}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &280339490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,13 +1699,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 323904444}
+  - component: {fileID: 323904445}
+  - component: {fileID: 323904446}
   m_Layer: 5
   m_Name: Gameplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &323904444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1699,6 +1728,31 @@ RectTransform:
   m_AnchoredPosition: {x: -0.00018310547, y: 0.000061035156}
   m_SizeDelta: {x: 0.00024414, y: 0.0002}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &323904445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323904443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8d16e2f869d2245aa07c6ad04dd691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myImage: {fileID: 1009386856}
+--- !u!225 &323904446
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323904443}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &328477938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,13 +2063,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 419067650}
+  - component: {fileID: 419067651}
+  - component: {fileID: 419067652}
   m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &419067650
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2036,6 +2092,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0.6223755, y: 0.8709717}
   m_SizeDelta: {x: 1.235, y: -1.7416}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &419067651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419067649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8d16e2f869d2245aa07c6ad04dd691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myImage: {fileID: 761880002}
+--- !u!225 &419067652
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419067649}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!224 &433475362 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4569139964351717119, guid: 7fbbb45de190bcf409d3ba1a7ef2e959, type: 3}
@@ -2513,6 +2594,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1777348687}
   - {fileID: 1858417956}
   - {fileID: 398362672}
   - {fileID: 548161142}
@@ -2755,13 +2837,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 578244593}
+  - component: {fileID: 578244594}
+  - component: {fileID: 578244595}
   m_Layer: 5
   m_Name: Interface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &578244593
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2782,6 +2866,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0024414062, y: -0.00012207031}
   m_SizeDelta: {x: -0.0047607, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &578244594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578244592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8d16e2f869d2245aa07c6ad04dd691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myImage: {fileID: 460661869}
+--- !u!225 &578244595
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578244592}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &611510668
 GameObject:
   m_ObjectHideFlags: 0
@@ -4569,13 +4678,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1110017920}
+  - component: {fileID: 1110017921}
+  - component: {fileID: 1110017922}
   m_Layer: 5
   m_Name: Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1110017920
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4596,6 +4707,31 @@ RectTransform:
   m_AnchoredPosition: {x: -0.00018310547, y: -0.000061035156}
   m_SizeDelta: {x: 0.00024414, y: 0.0001}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1110017921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110017919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8d16e2f869d2245aa07c6ad04dd691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myImage: {fileID: 611510670}
+--- !u!225 &1110017922
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110017919}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1184576046
 GameObject:
   m_ObjectHideFlags: 0
@@ -5895,18 +6031,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 323904443}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 548161145}
         m_TargetAssemblyTypeName: CircleFollower, Assembly-CSharp
         m_MethodName: MoveCircle
@@ -5914,6 +6038,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1542124336}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 323904445}
+        m_TargetAssemblyTypeName: PageFade, Assembly-CSharp
+        m_MethodName: OnOpenPage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7145,7 +7281,6 @@ GameObject:
   - component: {fileID: 1672769034}
   - component: {fileID: 1672769036}
   - component: {fileID: 1672769037}
-  - component: {fileID: 1672769038}
   m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
@@ -7270,18 +7405,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 419067649}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 548161145}
         m_TargetAssemblyTypeName: CircleFollower, Assembly-CSharp
         m_MethodName: MoveCircle
@@ -7294,19 +7417,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 419067651}
+        m_TargetAssemblyTypeName: PageFade, Assembly-CSharp
+        m_MethodName: OnOpenPage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
---- !u!114 &1672769038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1672769031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f8b1ab8effcee54faa26bb9c77d394a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1703667812
 GameObject:
   m_ObjectHideFlags: 0
@@ -7751,18 +7874,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1110017919}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 548161145}
         m_TargetAssemblyTypeName: CircleFollower, Assembly-CSharp
         m_MethodName: MoveCircle
@@ -7770,6 +7881,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1731072264}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1110017921}
+        m_TargetAssemblyTypeName: PageFade, Assembly-CSharp
+        m_MethodName: OnOpenPage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8049,6 +8172,81 @@ MonoBehaviour:
   background: {fileID: 1740785412}
   normalColor: {r: 1, g: 1, b: 1, a: 0}
   hoverColor: {r: 0.8792453, g: 0.3500391, b: 0.3500391, a: 1}
+--- !u!1 &1777348686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1777348687}
+  - component: {fileID: 1777348689}
+  - component: {fileID: 1777348688}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1777348687
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777348686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 548997603}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1777348688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777348686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1777348689
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777348686}
+  m_CullTransparentMesh: 1
 --- !u!1 &1858417955
 GameObject:
   m_ObjectHideFlags: 0
@@ -8227,18 +8425,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 578244592}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 548161145}
         m_TargetAssemblyTypeName: CircleFollower, Assembly-CSharp
         m_MethodName: MoveCircle
@@ -8246,6 +8432,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1864190380}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578244594}
+        m_TargetAssemblyTypeName: PageFade, Assembly-CSharp
+        m_MethodName: OnOpenPage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9757,18 +9955,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 242666733}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 548161145}
         m_TargetAssemblyTypeName: CircleFollower, Assembly-CSharp
         m_MethodName: MoveCircle
@@ -9776,6 +9962,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 2024494817}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 242666735}
+        m_TargetAssemblyTypeName: PageFade, Assembly-CSharp
+        m_MethodName: OnOpenPage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

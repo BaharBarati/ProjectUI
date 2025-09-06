@@ -20,10 +20,10 @@ public class CircleFollower : MonoBehaviour
         // transform.DOMove(target.position, 0.3f).SetEase(Ease.InOutSine);
         Sequence mySequence = DOTween.Sequence();
         
-        mySequence.Append(transform.DOScale(0.5f, 0.2f).SetEase(Ease.InOutSine));
+        mySequence.Append(transform.DOScale(0.5f, 0.5f).SetEase(Ease.InOutSine));
         
-        mySequence.Append(transform.DOMove(target.position, 0.3f).SetEase(Ease.InOutSine));
+        mySequence.Append(transform.DOMove(target.position, 0.2f).SetEase(Ease.InOutSine));
         
-        mySequence.Append(transform.DOScale(1f, 0.2f).SetEase(Ease.InOutSine));
+        mySequence.Append(transform.DOScale(1f, 0.5f).SetEase(Ease.InOutSine));
     }
 }

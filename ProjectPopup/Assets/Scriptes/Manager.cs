@@ -7,17 +7,26 @@ public class Manager : MonoBehaviour
     
     [SerializeField] private List<Toggle> toggles;
     private int currentIndex = 0;
-    // // Start is called once before the first execution of Update after the MonoBehaviour is created
-    // void Start()
-    // {
-    //     BlackPanel.SetActive(false);
-    // }
 
-    // Update is called once per frame
+    [SerializeField] private List<AbstractTabs> panels;
+    void Start()
+    {
+        for (int i = 0; i < toggles.Count; i++)
+        {
+            int index = i;
+            toggles[i].onValueChanged.AddListener((isOn) =>
+            {
+                if (isOn)
+                {
+                    ShowOnly(index);
+                }
+            });
+        }
+        ShowOnly(0);
+    }
+
     void Update()
     {
-        // if (toggles.Count == 0) return;
-
         if (Input.GetKeyDown(KeyCode.Q))
         {
             currentIndex--;
@@ -36,6 +45,16 @@ public class Manager : MonoBehaviour
                 currentIndex = 0;
             }
             toggles[currentIndex].isOn= true;
+        }
+    }
+    private void ShowOnly(int index)
+    {
+        for (int i = 0; i < panels.Count; i++)
+        {
+            if (i == index)
+                panels[i].OpenPopup(new Animation());
+            else
+                panels[i].ClosePopup(new Animation());
         }
     }
 }

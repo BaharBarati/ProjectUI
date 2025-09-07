@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class AnimationPopup : MonoBehaviour
 {
-     [SerializeField] private List<AbstractTabs> popups;
+     [SerializeField] private List<Tab> popups;
 //     private int currentPopupIndex = -1;
 //     
 //     public void GoToPopup(int nextIndex)

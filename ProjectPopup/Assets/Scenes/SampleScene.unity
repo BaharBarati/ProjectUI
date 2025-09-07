@@ -167,6 +167,42 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 5947980796462592785, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
+      propertyPath: m_Delegates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947980796462592785, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
+      propertyPath: m_Delegates.Array.data[2].eventID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947980796462592785, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947980796462592785, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947980796462592785, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1707781940}
+    - target: {fileID: 5947980796462592785, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947980796462592785, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSettingPopup
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947980796462592785, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947980796462592785, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7594437950678035053, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -269,11 +305,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7688631248323377367, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenPokjhkhkhpup
+      value: OpenSettingPopup
       objectReference: {fileID: 0}
     - target: {fileID: 7688631248323377367, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Settingpopup, Assembly-CSharp
+      value: PopupManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7688631248323377367, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -313,9 +349,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4734565625353506644, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
       insertIndex: -1
       addedObject: {fileID: 841033134}
-    - targetCorrespondingSourceObject: {fileID: 4734565625353506644, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 841033135}
   m_SourcePrefab: {fileID: 100100000, guid: 7ec5cd97ed89ad940a99f8415921d606, type: 3}
 --- !u!1 &18968532
 GameObject:
@@ -1370,6 +1403,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7caa53d8d3179b64ebae20f6cecbf46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
+  enterAnimation: {fileID: 11400000, guid: 182717558ed8b954990d90e1684262bd, type: 2}
   _canvasGroup: {fileID: 242666736}
 --- !u!1 &280339490
 GameObject:
@@ -1699,8 +1734,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 323904444}
-  - component: {fileID: 323904445}
   - component: {fileID: 323904446}
+  - component: {fileID: 323904448}
   m_Layer: 5
   m_Name: Gameplay
   m_TagString: Untagged
@@ -1728,19 +1763,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.00018310547, y: 0.000061035156}
   m_SizeDelta: {x: 0.00024414, y: 0.0002}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &323904445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323904443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a1f2d027ae011f48888786c15a0236a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _canvasGroup: {fileID: 323904446}
 --- !u!225 &323904446
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1753,6 +1775,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &323904448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323904443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9079f976008a6e34e9c4274a784e988e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 2
+  enterAnimation: {fileID: 11400000, guid: b123b830997ca664e861612efab6ca73, type: 2}
 --- !u!1 &328477938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,8 +2174,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 419067650}
-  - component: {fileID: 419067651}
   - component: {fileID: 419067652}
+  - component: {fileID: 419067653}
   m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
@@ -2167,19 +2203,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.6223755, y: 0.8709717}
   m_SizeDelta: {x: 1.235, y: -1.7416}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &419067651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419067649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a471d34822121c94abe6a8a51fe1318d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _canvasGroup: {fileID: 419067652}
 --- !u!225 &419067652
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2192,6 +2215,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &419067653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419067649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9079f976008a6e34e9c4274a784e988e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 1
+  enterAnimation: {fileID: 11400000, guid: b123b830997ca664e861612efab6ca73, type: 2}
 --- !u!224 &433475362 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4569139964351717119, guid: 7fbbb45de190bcf409d3ba1a7ef2e959, type: 3}
@@ -2912,8 +2949,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 578244593}
-  - component: {fileID: 578244594}
   - component: {fileID: 578244595}
+  - component: {fileID: 578244596}
   m_Layer: 5
   m_Name: Interface
   m_TagString: Untagged
@@ -2941,19 +2978,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0024414062, y: -0.00012207031}
   m_SizeDelta: {x: -0.0047607, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &578244594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 578244592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a471d34822121c94abe6a8a51fe1318d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _canvasGroup: {fileID: 578244595}
 --- !u!225 &578244595
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2966,6 +2990,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &578244596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578244592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9079f976008a6e34e9c4274a784e988e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 3
+  enterAnimation: {fileID: 11400000, guid: 182717558ed8b954990d90e1684262bd, type: 2}
 --- !u!1 &611510668
 GameObject:
   m_ObjectHideFlags: 0
@@ -4000,9 +4038,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 841033135}
-        m_TargetAssemblyTypeName: Settingpopup, Assembly-CSharp
-        m_MethodName: OpenPokjhkhkhpup
+      - m_Target: {fileID: 1707781940}
+        m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
+        m_MethodName: OpenSettingPopup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4012,19 +4050,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &841033135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841033127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bce7ac727e9f03499ba29623b87618a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BlackPanel: {fileID: 548997602}
 --- !u!1 &946443772
 GameObject:
   m_ObjectHideFlags: 0
@@ -4753,8 +4778,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1110017920}
-  - component: {fileID: 1110017921}
   - component: {fileID: 1110017922}
+  - component: {fileID: 1110017923}
   m_Layer: 5
   m_Name: Sound
   m_TagString: Untagged
@@ -4782,19 +4807,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.00018310547, y: -0.000061035156}
   m_SizeDelta: {x: 0.00024414, y: 0.0001}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1110017921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110017919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a1f2d027ae011f48888786c15a0236a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _canvasGroup: {fileID: 1110017922}
 --- !u!225 &1110017922
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4807,6 +4819,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1110017923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110017919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9079f976008a6e34e9c4274a784e988e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 4
+  enterAnimation: {fileID: 11400000, guid: 182717558ed8b954990d90e1684262bd, type: 2}
 --- !u!1 &1184576046
 GameObject:
   m_ObjectHideFlags: 0
@@ -5556,7 +5582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1415961242}
-  - component: {fileID: 1415961241}
+  - component: {fileID: 1415961243}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -5564,31 +5590,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1415961241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415961240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d20778345bab9847a90646f9a93666b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BlackPanel: {fileID: 548997602}
-  toggles:
-  - {fileID: 2024494822}
-  - {fileID: 1672769037}
-  - {fileID: 1542124341}
-  - {fileID: 1864190385}
-  - {fileID: 1731072269}
-  panels:
-  - {fileID: 0}
-  - {fileID: 419067651}
-  - {fileID: 323904445}
-  - {fileID: 578244594}
-  - {fileID: 1110017921}
 --- !u!4 &1415961242
 Transform:
   m_ObjectHideFlags: 0
@@ -5604,6 +5605,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1628321452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1415961243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415961240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6392b53f9dcc459d8b74aadb4c5a6202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabs:
+  - {fileID: 242666737}
+  - {fileID: 419067653}
+  - {fileID: 323904448}
+  - {fileID: 578244596}
+  - {fileID: 1110017923}
+  toggles:
+  - {fileID: 2024494822}
+  - {fileID: 1672769037}
+  - {fileID: 1542124341}
+  - {fileID: 1864190385}
+  - {fileID: 1731072269}
 --- !u!1 &1479193273
 GameObject:
   m_ObjectHideFlags: 0
@@ -6112,18 +6137,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 323904443}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 548161145}
         m_TargetAssemblyTypeName: CircleFollower, Assembly-CSharp
         m_MethodName: MoveCircle
@@ -7487,18 +7500,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 419067649}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 548161145}
         m_TargetAssemblyTypeName: CircleFollower, Assembly-CSharp
         m_MethodName: MoveCircle
@@ -7693,7 +7694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bce7ac727e9f03499ba29623b87618a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlackPanel: {fileID: 548997602}
+  SettingPopup: {fileID: 548997602}
 --- !u!1 &1717642097
 GameObject:
   m_ObjectHideFlags: 0
@@ -7968,18 +7969,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1110017919}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 548161145}
         m_TargetAssemblyTypeName: CircleFollower, Assembly-CSharp
         m_MethodName: MoveCircle
@@ -8444,18 +8433,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 578244592}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 548161145}
         m_TargetAssemblyTypeName: CircleFollower, Assembly-CSharp
         m_MethodName: MoveCircle
@@ -9974,18 +9951,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 242666733}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 548161145}
         m_TargetAssemblyTypeName: CircleFollower, Assembly-CSharp
         m_MethodName: MoveCircle

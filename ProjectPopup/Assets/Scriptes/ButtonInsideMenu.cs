@@ -8,7 +8,11 @@ public class ButtonInsideMenu : MonoBehaviour
     [SerializeField] private Color normalColor;
     [SerializeField] private Color hoverColor;
     private Vector3 originalScale;
+    
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
+    
     void Start()
     {
         originalScale = transform.localScale;
@@ -21,7 +25,7 @@ public class ButtonInsideMenu : MonoBehaviour
         transform.DOScale(originalScale, 0.2f).SetEase(Ease.OutBack);
 
         if (background != null)
-            background.DOColor(normalColor, 0.2f);
+            background.DOColor(normalColor, 0.3f);
     }
 
     // Update is called once per frame

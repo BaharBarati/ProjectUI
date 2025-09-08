@@ -9,7 +9,6 @@ public class ButtonInsideMenu : MonoBehaviour
     [SerializeField] private Color hoverColor;
     private Vector3 originalScale;
     
-    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
     

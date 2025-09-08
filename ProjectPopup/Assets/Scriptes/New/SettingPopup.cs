@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using DG.Tweening;
 
 namespace Scriptes.New
 {
@@ -63,9 +64,8 @@ namespace Scriptes.New
                     // selectedTab.gameObject.SetActive(true);
                     
                     lastSelectedTab.gameObject.SetActive(false);
-                    selectedTab.gameObject.SetActive(true);
                     lastSelectedTab.Reset();
-                    
+                    selectedTab.gameObject.SetActive(true);
                     selectedTab.ExecuteEnterAnimation();
                     _lastSelectedTabIndex = selectedTab.index;
                 });

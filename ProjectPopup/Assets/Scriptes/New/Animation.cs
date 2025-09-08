@@ -7,5 +7,6 @@ namespace Scriptes.New
     {
         public abstract void PlayInward(GameObject gameObject);
         public abstract void PlayBackwards(GameObject gameObject, Action doneAction = null);
+        // public abstract void Kill();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,23 +11,43 @@ namespace Scriptes.New
     [CreateAssetMenu(fileName = "FadeAnimation", menuName = "TabAnimations/FadeAnimation", order = 1)]
     public class FadeAnimation : Animation
     {
-        public override void PlayInward(GameObject gameObject)
+        private bool isAnimationKilled;
+        private Tween enterAnimation;
+        private Tween exitAnimation;
+        
+        public override void PlayInward(GameObject gameObject , Action doneAction = null)
         {
+            isAnimationKilled = false;
 
-            var _canvasGroup = gameObject.GetComponent<CanvasGroup>();
+            var _canvasGroup = gameObject.GetOrAddComponent<CanvasGroup>();
             _canvasGroup.alpha = 0; 
-            _canvasGroup.DOFade(1, 0.7f).SetEase(Ease.OutBack);
+            enterAnimation = _canvasGroup.DOFade(1, 0.7f).SetEase(Ease.OutBack).OnComplete(() =>
+            {
+                if(isAnimationKilled) return;
+                
+                doneAction?.Invoke();
+            });
         }
 
         public override void PlayBackwards(GameObject gameObject,Action doneAction = null)
         {
-            var _canvasGroup = gameObject.GetComponent<CanvasGroup>();
-            _canvasGroup.DOFade(0f, 0.7f).OnComplete(()=>
+            isAnimationKilled = false;
+            
+            var _canvasGroup = gameObject.GetOrAddComponent<CanvasGroup>();
+            exitAnimation = _canvasGroup.DOFade(0f, 0.7f).OnComplete(()=>
             {
                 // _canvasGroup.interactable = false;
                 // _canvasGroup.blocksRaycasts = false;
+                if(isAnimationKilled) return;
                 doneAction?.Invoke();
             });
+        }
+
+        public override void KillAnimation()
+        {
+            isAnimationKilled = true;
+            exitAnimation?.Kill();
+            enterAnimation?.Kill();
         }
     }
 }

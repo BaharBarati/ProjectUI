@@ -8,26 +8,33 @@ public class Tab : MonoBehaviour
     public int index;
     public Animation enterAnimation;
     
-
+    //cache
+    private Animation exitAnimation;
     public void Reset()
     {
+        KillAnimation();
+        
         transform.localScale = Vector3.one;
         var canvasGroup = gameObject.GetComponent<CanvasGroup>();
         canvasGroup.alpha = 1;
-        // canvasGroup.interactable = true;
-        // canvasGroup.blocksRaycasts = true;
     }
 
-    public void ExecuteEnterAnimation()
+    public void KillAnimation()
     {
-       
-        enterAnimation.PlayInward(gameObject);
+        // stop Enter & Exist Animation
+        enterAnimation?.KillAnimation();
+        exitAnimation?.KillAnimation();
+    }
+
+    public void ExecuteEnterAnimation(Action onFinish)
+    {
+        enterAnimation.PlayInward(gameObject , onFinish);
         Debug.Log($"Execute Enter animation:{gameObject.name}");
     }
 
-    public void ExecuteExistAnimation(Animation animation, Action onFinish)
+    public void ExecuteExitAnimation(Animation animation, Action onFinish)
     {
-       
+        exitAnimation = animation;
         animation.PlayBackwards(gameObject, onFinish);
         Debug.Log($"Execute Exist animation:{gameObject.name}");
     }

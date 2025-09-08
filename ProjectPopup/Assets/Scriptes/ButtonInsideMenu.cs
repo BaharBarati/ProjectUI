@@ -35,9 +35,10 @@ public class ButtonInsideMenu : MonoBehaviour
     public void OnHoverEnter()
     {
         transform.DOScale(originalScale * 1.05f, 0.2f).SetEase(Ease.OutBack);
-
+        
         if (background != null)
             background.DOColor(hoverColor, 0.2f);
+        
     }
 
     public void OnHoverExit()

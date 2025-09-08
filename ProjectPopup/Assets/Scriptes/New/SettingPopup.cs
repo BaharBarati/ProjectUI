@@ -7,12 +7,21 @@ using DG.Tweening;
 
 namespace Scriptes.New
 {
+    public enum AnimationExecutionStateFromAToB
+    {
+        Done,
+        ExitA,
+        EnterB
+    }
+
     public class SettingPopup : MonoBehaviour
     {
         private int _lastSelectedTabIndex;
         [SerializeField] private List<Tab> tabs;
         [SerializeField] private List<Toggle> toggles;
         private int currentIndex = 0;
+        private AnimationExecutionStateFromAToB animationExecutionState = AnimationExecutionStateFromAToB.Done;
+
         private void Awake()
         {
             _lastSelectedTabIndex = 0;
@@ -47,28 +56,84 @@ namespace Scriptes.New
 
         private void ChangeTab(int index)
         {
-            // lets say we are going from tab a to b
-            // set the fadeout animaotin for tab A to be fadeInAnimation tab B
-            // execute fadeIn animation tab B after fadeout A
+            // if(animationExecutionState != AnimationExecutionStateFromAToB.Done) return;
+            Debug.Log("ChangeTab Called");
             var selectedTab = tabs[index];
             var lastSelectedTab = tabs[_lastSelectedTabIndex];
             if (lastSelectedTab.index == selectedTab.index)
             {
+                if (animationExecutionState == AnimationExecutionStateFromAToB.ExitA)
+                {
+                    selectedTab.Reset();
+                    selectedTab.ExecuteEnterAnimation(() =>
+                    {
+                        animationExecutionState = AnimationExecutionStateFromAToB.Done;
+                    });
+                }
                 return;
             }
+            
+            
+            Debug.Log($"Last Selected Tab:{lastSelectedTab.name}  + \n" +
+                      $"$\"Selected Tab:{selectedTab.name}" + "\n" +
+                      $"Animation Execution State:{animationExecutionState}");
+            if (animationExecutionState == AnimationExecutionStateFromAToB.ExitA)
+            {
+                animationExecutionState = AnimationExecutionStateFromAToB.ExitA;
+                lastSelectedTab.KillAnimation();
+                lastSelectedTab.ExecuteExitAnimation(selectedTab.enterAnimation,
+                    () =>
+                    {
+                        lastSelectedTab.gameObject.SetActive(false);
+                        lastSelectedTab.Reset();
+                        selectedTab.gameObject.SetActive(true);
+                        animationExecutionState = AnimationExecutionStateFromAToB.EnterB;
+                        selectedTab.ExecuteEnterAnimation(() =>
+                        {
+                            animationExecutionState = AnimationExecutionStateFromAToB.Done;
+                        });
+                        _lastSelectedTabIndex = selectedTab.index;
+                    });
+            }
+            else if (animationExecutionState == AnimationExecutionStateFromAToB.EnterB)
+            {
+                animationExecutionState = AnimationExecutionStateFromAToB.ExitA;
+                lastSelectedTab.KillAnimation();
+                lastSelectedTab.ExecuteExitAnimation(selectedTab.enterAnimation,
+                    () =>
+                    {
+                        lastSelectedTab.gameObject.SetActive(false);
+                        lastSelectedTab.Reset();
+                        selectedTab.gameObject.SetActive(true);
+                        animationExecutionState = AnimationExecutionStateFromAToB.EnterB;
+                        selectedTab.ExecuteEnterAnimation(() =>
+                        {
+                            animationExecutionState = AnimationExecutionStateFromAToB.Done;
+                        });
+                        _lastSelectedTabIndex = selectedTab.index;
+                    });
+            }
+            else if (animationExecutionState == AnimationExecutionStateFromAToB.Done)
+            {
+                animationExecutionState = AnimationExecutionStateFromAToB.ExitA;
+                lastSelectedTab.ExecuteExitAnimation(selectedTab.enterAnimation,
+                    () =>
+                    {
+                        // lastSelectedTab.gameObject.SetActive(false);
+                        // selectedTab.gameObject.SetActive(true);
 
-            lastSelectedTab.ExecuteExistAnimation(selectedTab.enterAnimation,
-                () =>
-                {
-                    // lastSelectedTab.gameObject.SetActive(false);
-                    // selectedTab.gameObject.SetActive(true);
-                    
-                    lastSelectedTab.gameObject.SetActive(false);
-                    lastSelectedTab.Reset();
-                    selectedTab.gameObject.SetActive(true);
-                    selectedTab.ExecuteEnterAnimation();
-                    _lastSelectedTabIndex = selectedTab.index;
-                });
+                        lastSelectedTab.gameObject.SetActive(false);
+                        lastSelectedTab.Reset();
+
+                        selectedTab.gameObject.SetActive(true);
+                        animationExecutionState = AnimationExecutionStateFromAToB.EnterB;
+                        selectedTab.ExecuteEnterAnimation(() =>
+                        {
+                            animationExecutionState = AnimationExecutionStateFromAToB.Done;
+                        });
+                        _lastSelectedTabIndex = selectedTab.index;
+                    });
+            }
         }
     }
 }

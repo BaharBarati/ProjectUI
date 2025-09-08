@@ -7,10 +7,8 @@ namespace Scriptes.New
     [CreateAssetMenu(fileName = "ScaleAnimation", menuName = "TabAnimations/ScaleAnimation", order = 1)]
     public class ScaleAnimation : Animation
     {
-        // private Tween currentDOTween;
         public override void PlayInward(GameObject gameObject)
         {
-            // gameObject.SetActive(true);
             var _canvasGroup = gameObject.GetComponent<CanvasGroup>();
             // _canvasGroup.interactable = true;
             // _canvasGroup.blocksRaycasts = true;
@@ -31,17 +29,8 @@ namespace Scriptes.New
                     // _canvasGroup.interactable = false;
                     // _canvasGroup.blocksRaycasts = false;
                     
-                    // gameObject.SetActive(false);
                     doneAction?.Invoke();
                 });
         }
-        // public override void Kill()
-        // {
-        //     if (currentDOTween != null && currentDOTween.IsActive())
-        //     {
-        //         currentDOTween.Kill();
-        //         currentDOTween = null;
-        //     }
-        // }
     }
 }

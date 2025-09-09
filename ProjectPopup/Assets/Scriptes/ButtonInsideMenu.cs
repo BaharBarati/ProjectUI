@@ -8,7 +8,8 @@ public class ButtonInsideMenu : MonoBehaviour
     [SerializeField] private Color normalColor;
     [SerializeField] private Color hoverColor;
     private Vector3 originalScale;
-    
+
+    [SerializeField] private GameObject panel; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
     
@@ -38,7 +39,8 @@ public class ButtonInsideMenu : MonoBehaviour
         
         if (background != null)
             background.DOColor(hoverColor, 0.2f);
-        
+
+        panel.SetActive(true);
     }
 
     public void OnHoverExit()
@@ -47,5 +49,6 @@ public class ButtonInsideMenu : MonoBehaviour
 
         if (background != null)
             background.DOColor(normalColor, 0.2f);
+        panel.SetActive(false);
     }
 }

@@ -22,16 +22,6 @@ MonoBehaviour:
       m_Sprite: {fileID: -4753983515378507383, guid: 8593bd9e141899545b177ec2239b4a19, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -4753983515378507383, guid: 8593bd9e141899545b177ec2239b4a19, type: 3}
-    - m_Name: Hat_2
-      m_Hash: 188195940
-      m_Sprite: {fileID: -533262011490249991, guid: 8593bd9e141899545b177ec2239b4a19, type: 3}
-      m_FromMain: 0
-      m_SpriteOverride: {fileID: -533262011490249991, guid: 8593bd9e141899545b177ec2239b4a19, type: 3}
-    - m_Name: Hat_3
-      m_Hash: 1009816818
-      m_Sprite: {fileID: 3028074845186541728, guid: 8593bd9e141899545b177ec2239b4a19, type: 3}
-      m_FromMain: 0
-      m_SpriteOverride: {fileID: 3028074845186541728, guid: 8593bd9e141899545b177ec2239b4a19, type: 3}
     - m_Name: Hat_4
       m_Hash: 575930705
       m_Sprite: {fileID: 7301223456094332171, guid: 8593bd9e141899545b177ec2239b4a19, type: 3}
@@ -53,7 +43,7 @@ MonoBehaviour:
       m_FromMain: 0
       m_SpriteOverride: {fileID: 527414024099693362, guid: 8593bd9e141899545b177ec2239b4a19, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 7
+    m_EntryOverrideCount: 5
   - m_Name: EarRing
     m_Hash: 89092004
     m_CategoryList: []
@@ -243,5 +233,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 4
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638937036986025045
+  m_ModificationHash: 638939642720900705
   m_Version: 1

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class GameObjectWalk : MonoBehaviour
+public class SimpleWalker : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
 
@@ -11,7 +11,6 @@ public class GameObjectWalk : MonoBehaviour
     [SerializeField] private float riseTime = 0.08f;
 
     private Rigidbody2D rb;
-    private Animator anim;
 
     private bool walking;
     private bool facingRight = true;
@@ -20,18 +19,15 @@ public class GameObjectWalk : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
         float h = Input.GetAxisRaw("Horizontal"); 
         
-        anim.SetFloat("Direction",h);
         
         bool hasInput = Mathf.Abs(h) > 0.1f;
         
-        anim.SetBool("Walking", hasInput);
         if (Input.GetKeyDown(KeyCode.Space) && !busy)
         {
             StartCoroutine(Bop());
@@ -74,10 +70,6 @@ public class GameObjectWalk : MonoBehaviour
     System.Collections.IEnumerator Bop()
     {
         busy = true;
-        if (anim) anim.SetBool("IsBopping", true); 
-        rb.gravityScale = 0f;
-        
-        //with dotween
 
         Vector3 startPos = transform.position;
         Vector3 dipPos   = startPos + Vector3.down * dipDistance;
@@ -102,12 +94,8 @@ public class GameObjectWalk : MonoBehaviour
             yield return null;
         }
         
-        //
-        
-        if (anim) anim.SetBool("IsBopping", false);
 
         busy = false;
-        rb.gravityScale = 5f;
     }
     
 }
